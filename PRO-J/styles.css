@@ -1,5 +1,6 @@
 body{
     margin: 0;
+    overflow-x: hidden;
 }
 h1{
 position:sticky;
@@ -14,7 +15,6 @@ width: 100%;
 height: 12vh;
 box-shadow: 0 0 50px 0 rgb(19, 78, 189);
 }
-
 .under{
 position: sticky;
 top:12vh;
@@ -40,7 +40,6 @@ background-position: center center;
     background-position: center center;
     background-size: cover;
 }
-
 h2{
     margin-top: 0;
     color: white;
@@ -60,11 +59,8 @@ h2[name="two"]{
     height: 20vh;
     flex-direction: row;
     flex-wrap: wrap;
-    width: 60%;
+    width: 100%;
     padding: 0 5%;
-}
-.R1{
-    width:40%;
 }
 .R2{
     padding-top: 10vh;
@@ -77,23 +73,23 @@ h2[name="two"]{
     border-radius: 10px;
     padding:0px 2rem ;
 }
-
 #gal2 div[class="R1"]{
 position: relative;
 flex-direction: row-reverse;
 float: right;
-
+width:40%
 }
 #gal2 div[class="R2"]{
     position: relative;
     flex-direction: row-reverse;
     float: right;
+    width: 60%
     }
 footer{
     position: fixed;
     bottom: 0;
-    width: 100vw;
     text-align: center;
+    width: 100VW;
     font-size: 15px;
     font-family:'Courier New', Courier, monospace;
     background-color: darkslateblue;
@@ -101,19 +97,16 @@ footer{
 a {
     color: crimson;
   }
-  
   a:visited {
     color:rgb(40, 16, 95);
   }
-  
   a:hover {
     color: palevioletred;
   }
-  
   a:active {
     color: rgb(4, 91, 102);
   }
-  p{
+  p, label{
     color: azure;
     font-size: 2rem;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -133,37 +126,37 @@ a {
     color: rgb(192, 126, 4);
   }
   form {
-    width: 60vw;
-      max-width: 500px;
-      min-width: 300px;
+    text-align: center;
+    width: 100vw;
+    max-width: 500px;
+    min-width: 300px;
       margin: 0 auto;
     padding-bottom: 2em;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   }
-  
   fieldset {
     border: none;
     padding: 2rem 0;
     border-bottom: 3px solid #3b3b4f;
   }
-  
   fieldset:last-of-type {
     border-bottom: none;
   }
-  
-  label {
+  .lower label {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: #078ea0;
     display: block;
       margin: 0.5rem 0;
-  }
-  
+  } 
   input, textarea {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     margin: 10px 0 0 0;
       width: 100%;
     min-height: 2em;
     background-color: black;
     border: 1px solid #0a0a23;
-    color: #ffffff;
+    color: rgb(211, 137, 0);
   } 
-  
   input[type="submit"] {
     display: block;
     width: 60%;
@@ -174,7 +167,6 @@ a {
     border-color: white;
     min-width: 300px;
   }
-  
   input[type="file"] {
     padding: 1px 2px;
   }
