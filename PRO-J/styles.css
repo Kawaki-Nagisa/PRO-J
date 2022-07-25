@@ -1,12 +1,13 @@
 body{
-    margin: 0;
-    overflow-x: hidden;
+  margin: 0;
+  font-size: 100%;
+  overflow-x: hidden;
 }
 h1{
 position:sticky;
 top:0;
 text-align: center;
-font-size: 4rem;
+font-size: 10vmin;
 background: linear-gradient(90deg,rgb(44, 2, 2), rgb(19, 1, 36)); 
 margin: 0 auto;
 color: aliceblue;
@@ -17,9 +18,9 @@ box-shadow: 0 0 50px 0 rgb(19, 78, 189);
 }
 .under{
 position: sticky;
-top:12vh;
-width:100%;
-height: 110vh;
+top:0;
+width:100vw;
+height: 100vh;
 padding: 0;
 background-image: linear-gradient(to right, rgba(0, 0, 0, 0.815), rgba(220, 20, 60, 0.514)), url(MV5BZDM4NzE1MjYtMWM2ZS00ODY0LTk3ZjYtZDZkMjljNTlmMmU5XkEyXkFqcGdeQXVyODk4OTc3MTY@._V1_.jpg);
 background-repeat: no-repeat;
@@ -34,7 +35,7 @@ background-position: center center;
     top:0;
     margin-top: -100vh;
     width:100%;
-    height: 110vh;
+    height: 100vh;
     background-image: linear-gradient(to right, rgba(32, 1, 44, 0.815), rgba(0, 0, 0, 0.514)), url(5c54730e74c58715613ed5e4.webp);
     background-repeat: no-repeat;
     background-position: center center;
@@ -44,7 +45,7 @@ h2{
     margin-top: 0;
     color: white;
     padding-top: 50px;
-    font-size: 3rem;
+    font-size: 6vmin;
 }
 h2[name="one"]{
     padding-left: 5%;
@@ -53,9 +54,16 @@ h2[name="two"]{
     padding-right: 5%;
     text-align: right;
 }
+#gal1, #gal2{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+#gal2 .R1, #gal2 .R2{
+justify-content: right;
+}
 .R1, .R2{
     display: flex;
-    justify-content:safe;
     height: 20vh;
     flex-direction: row;
     flex-wrap: wrap;
@@ -66,25 +74,13 @@ h2[name="two"]{
     padding-top: 10vh;
 }
 #gal1 img, #gal2 img{
-    width: 30vh;
-    height: 20vh;
+    width: calc(15px + 15vmax);
+    height: 20vmin;
     object-fit: cover;
     margin-top: 8px;
     border-radius: 10px;
     padding:0px 2rem ;
 }
-#gal2 div[class="R1"]{
-position: relative;
-flex-direction: row-reverse;
-float: right;
-width:40%
-}
-#gal2 div[class="R2"]{
-    position: relative;
-    flex-direction: row-reverse;
-    float: right;
-    width: 60%
-    }
 footer{
     position: fixed;
     bottom: 0;
@@ -106,9 +102,9 @@ a {
   a:active {
     color: rgb(4, 91, 102);
   }
-  p, label{
+  p{
     color: azure;
-    font-size: 2rem;
+    font-size: 3vmin;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: inline;
     padding-left: 2%;
@@ -133,6 +129,7 @@ a {
       margin: 0 auto;
     padding-bottom: 2em;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 3vmin;
   }
   fieldset {
     border: none;
@@ -175,3 +172,9 @@ a {
     margin: 0 0.5em 0 0;
     vertical-align: middle;
   }
+  @media(min-width: 1000px){
+    #gal1 img, #gal2 img{
+      width: 30vh;  
+      height: 20vh;
+    }
+    }
